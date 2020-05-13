@@ -1,24 +1,46 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="{{ app()->getLocale() }}">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="{{ asset('Assets-Admin/img/favicon.html') }}">
 
-        <title>Laravel</title>
+    <title>Dashboard - Admin</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-    </head>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('Assets-Admin/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('Assets-Admin/css/bootstrap-reset.css') }}" rel="stylesheet">
+    <!--external css-->
+    <link href="{{ asset('Assets-Admin/assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ asset('Assets-Admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css') }}" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ asset('Assets-Admin/css/owl.carousel.css') }}" type="text/css">
+    <link href="{{ asset('Assets-Admin/css/slidebars.css') }}" rel="stylesheet">
+    <link href="{{ asset('Assets-Admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('Assets-Admin/css/style-responsive.css') }}" rel="stylesheet" />
+</head>
     <body>
         <div id="app"></div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
     </body>
+    
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="{{ asset('Assets-Admin/js/jquery.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/bootstrap.min.js') }}"></script>
+    <script class="include" type="text/javascript" src="{{ asset('Assets-Admin/js/jquery.dcjqaccordion.2.7.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/jquery.nicescroll.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Assets-Admin/js/jquery.sparkline.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('Assets-Admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/owl.carousel.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/jquery.customSelect.min.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/respond.min.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/slidebars.min.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/common-scripts.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/sparkline-chart.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/easy-pie-chart.js') }}"></script>
+    <script src="{{ asset('Assets-Admin/js/count.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </html>
