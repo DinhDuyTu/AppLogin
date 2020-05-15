@@ -3,7 +3,7 @@ require('./bootstrap');
 import './bootstrap';
 import Vue from 'vue';
 import router from './routes';
-import App from './components/AppComponent'
+import App from './components/App'
 import VueAuth from '@websanova/vue-auth';
 import axios from 'axios';
 import VueAxios from 'vue-axios';

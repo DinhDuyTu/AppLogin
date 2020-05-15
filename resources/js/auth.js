@@ -9,27 +9,27 @@ const config = {
     tokenDefaultName: 'auth-token',
     tokenStore: ['cookie'],
     notFoundRedirect: {
-        path: '/home'
+        path: '/dashboard'
     },
     registerData: {
-        url: '/api/auth/register',
+        url: '/api/register',
         method: 'POST',
         redirect: null,
     },
     loginData: {
-        url: '/api/auth/login',
+        url: '/api/login',
         method: 'POST',
-        redirect: '/home',
+        redirect: '/dashboard',
         fetchUser: true,
     },
     logoutData: {
-        url: '/api/auth/logout',
+        url: '/api/logout',
         method: 'POST',
         redirect: '/login',
         makeRequest: true
     },
     fetchData: {
-        url: '/api/auth/user',  
+        url: '/api/user',  
         method: 'GET',
         enabled: true
     },
