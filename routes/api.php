@@ -20,6 +20,8 @@ Route::post('logout', 'AuthController@logout');
 
 Route::get('get_list_user', 'UserController@index');
 Route::group(['middleware' => 'jwt.auth'], function(){
-    Route::get('user', 'AuthController@getAuthenticatedUser');
-  });
+  Route::get('user', 'AuthController@getAuthenticatedUser');
+  Route::get('email/resend', 'Api\VerificationController@resend')->name('verification.resend');
+});
 
+Route::get('email/verify/{id}/{hash}', 'Api\VerificationController@verify')->name('verification.verify');

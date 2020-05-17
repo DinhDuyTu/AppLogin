@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: applogin
+    privileged: true
+    volumes:
+      - .:/var/www/html:delegated
+    depends_on:
+      - db
+    ports:
+      - 1234:80
+
+  db:
+    image: mysql:5.7
+    container_name: applogin_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: "Asia/Tokyo"
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql:delegated
+    ports:
+      - 1233:3306
+
+volumes:
+  mysql_data:
+    driver: local
