@@ -36,7 +36,7 @@ export default {
       iAgree: false,
       error: false,
       errors: [],
-      errorWhenRegistion: false
+      errorWhenRegistion: false,
     };
   },
   methods: {
@@ -49,12 +49,11 @@ export default {
             params: {
               name: app.name,
               email: app.email,
-              password: app.password
+              password: app.password,
+              password_confirmation: app.repassword
             },
             success: function(resp) {
-              if (resp.status == 200) {
-                app.$router.push({ name: "login" });
-              }
+              app.$router.push({ name: "login" });
             },
             error: function(resp) {
               app.errors = resp.response.data.errors;

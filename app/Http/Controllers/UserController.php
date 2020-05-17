@@ -17,6 +17,11 @@ class UserController extends Controller
         return User::get();
     }
 
+    public function checkVerify()
+    {
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *

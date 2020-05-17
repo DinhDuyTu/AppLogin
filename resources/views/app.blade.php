@@ -44,4 +44,9 @@
     <script src="{{ asset('Assets-Admin/js/easy-pie-chart.js') }}"></script>
     <script src="{{ asset('Assets-Admin/js/count.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    <script>
+        window.Laravel = {!! json_encode([
+           'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
 </html>

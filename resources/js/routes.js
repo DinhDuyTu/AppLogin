@@ -5,6 +5,7 @@ import DashboardLayout from './components/./main/DashboardLayout.vue';
 import Error404 from './components/Errors/404.vue';
 import Dashboard from './components/dashboard/Dashboard.vue';
 import ListUser from './components/users/ListUser.vue';
+import Verify from './components/auth/Verify.vue'
 
 const routes = [
     // path for determined page
@@ -44,6 +45,14 @@ const routes = [
 				component: ListUser,
 			},
 		]
+    },
+    {
+        path: '/verify/email',
+        component: Verify,
+        name: 'verify',
+        meta: {
+            auth: true
+        }
     },
     {
 		path: '/404', name: 'error404', component: Error404

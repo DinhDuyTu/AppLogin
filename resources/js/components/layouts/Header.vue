@@ -307,21 +307,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      user: ''
-    }
-  },
+  props: ['user'],
   methods: {
     logout: function() {
       this.$auth.logout();
     }
-  },
-  created() {
-    axios.get('/api/user')
-    .then(response => {
-        this.user = response.data.user
-    })
   },
 };
 </script>
